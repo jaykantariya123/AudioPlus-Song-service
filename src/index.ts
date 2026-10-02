@@ -25,6 +25,12 @@ app.use("/api/v1", songRoutes);
 
 const port = process.env.PORT
 
-app.listen(port, () => {
-    console.log(`server is running on ${port}`);
+// app.listen(port, () => {
+//     console.log(`server is running on ${port}`);
+// });
+
+app.get("/", (req, res) => {
+    res.send("Server is working!");
 });
+
+export default app;
